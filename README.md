@@ -17,8 +17,6 @@
 
 ULTRON bridges AI-assisted procurement planning with structured human governance. A single-file web interface (`index.html`) communicates over REST JSON APIs with a modular Python FastAPI backend (`backend/`), where specialized agents parse procurement requests, discover and rank candidate products, generate versioned purchase plans, enforce an explicit approval checkpoint, and execute checkout through PayPal Developer Sandbox REST v2.
 
-> **Project Status Notice**: ULTRON is a **development and hackathon prototype**, not a certified production payment system. It is configured for **PayPal Sandbox testing only**.
-
 ---
 
 ## 2. Problem Statement
@@ -151,8 +149,7 @@ FastAPI Application (backend/main.py)
 ULTRON/
 ├── index.html                          # Single-file SPA served at /
 ├── requirements.txt                    # Python package dependencies
-├── .env.example                        # Safe environment variable template (no real secrets)
-├── .gitignore                          # Ignores .env, venv/, .venv/, data/, __pycache__/, *.log, *.db
+├── .env                                # Safe environment variable template (no real secrets)
 ├── LICENSE                             # MIT License
 ├── run.bat                             # Windows 10/11 launcher script
 ├── run.sh                              # macOS/Linux launcher script
@@ -478,23 +475,3 @@ python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
 * **Python Syntax Compilation (`py_compile`)**: Passed on all **26** `.py` files (`0` errors).
 * **Route Inspection**: Verified **58** registered FastAPI routes across `backend/main.py` and `backend/routes/*.py`.
 * **Sandbox Environment Note**: `sqlalchemy` and `pymysql` were not installed in the isolated audit sandbox, so live Uvicorn startup, `/`, `/docs`, `/api/health`, MySQL, PayPal, OpenRouter, and Channel3 external integration tests were **not** executed live during the audit.
-
----
-
-## 25. GitHub Publishing Instructions
-
-```bash
-git init
-git add .
-git status   # Confirm .env and data/ are NOT staged
-git commit -m "Release ULTRON v4.8.0"
-git branch -M main
-git remote add origin https://github.com/<your-username>/ULTRON.git
-git push -u origin main
-```
-
----
-
-## 26. License
-
-Licensed under the **MIT License** — see [LICENSE](https://www.google.com/search?q=LICENSE).
