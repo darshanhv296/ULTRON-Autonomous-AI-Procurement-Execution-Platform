@@ -1,0 +1,544 @@
+{
+  "users": [
+    {
+      "id": "usr-admin-01",
+      "name": "Demo Administrator",
+      "email": "demo@example.invalid",
+      "role": "CHIEF_PROCUREMENT_ARCHITECT",
+      "created_at": "2026-11-11T15:00:00.000Z"
+    }
+  ],
+  "objectives": [
+    {
+      "id": "OBJ-46733",
+      "user_id": "usr-admin-01",
+      "title": "Procure MONITOR: Purchase a monitor with a minimum 144Hz refresh rate.",
+      "description": "Purchase a monitor with a minimum 144Hz refresh rate.",
+      "status": "COMPLETED",
+      "budget_limit": null,
+      "currency": "USD",
+      "created_at": "2026-11-12T18:49:25.000Z",
+      "updated_at": "2026-11-12T19:19:29.184Z"
+    },
+    {
+      "id": "OBJ-1001",
+      "user_id": "usr-admin-01",
+      "title": "Procure Enterprise AI Dev Workstation Peripherals & Monitors",
+      "description": "Autonomous sourcing of dual color-calibrated 4K HDR displays and ergonomic peripherals within $1,000 budget.",
+      "status": "COMPLETED",
+      "budget_limit": 1000.0,
+      "currency": "USD",
+      "created_at": "2026-11-11T15:34:05.623Z",
+      "updated_at": "2026-11-12T14:34:05.623Z"
+    },
+    {
+      "id": "OBJ-1002",
+      "user_id": "usr-admin-01",
+      "title": "Autonomous GPU Node Sourcing for Local LLM Cluster",
+      "description": "Source 2x high-memory compute accelerators with enterprise PCIe compatibility, target under $1,800 total.",
+      "status": "AWAITING_APPROVAL",
+      "budget_limit": 1800.0,
+      "currency": "USD",
+      "created_at": "2026-11-12T14:34:05.623Z",
+      "updated_at": "2026-11-12T15:34:05.622Z"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "CST-101",
+      "objective_id": "OBJ-1001",
+      "constraint_type": "max_budget",
+      "constraint_value": "1000.00 USD",
+      "is_hard_constraint": true,
+      "created_at": "2026-11-11T15:34:05.623Z"
+    },
+    {
+      "id": "CST-201",
+      "objective_id": "OBJ-1002",
+      "constraint_type": "max_budget",
+      "constraint_value": "1800.00 USD",
+      "is_hard_constraint": true,
+      "created_at": "2026-11-12T14:34:05.623Z"
+    }
+  ],
+  "missions": [
+    {
+      "id": "MSN-46733",
+      "objective_id": "OBJ-46733",
+      "status": "COMPLETED",
+      "current_stage": "13. Lifecycle Settlement & Verification",
+      "agent_assigned": "ULTRON Payment & Settlement Agent",
+      "started_at": "2026-11-12T18:49:25.000Z",
+      "completed_at": "2026-11-12T19:19:29.184Z"
+    },
+    {
+      "id": "MSN-1001",
+      "objective_id": "OBJ-1001",
+      "status": "COMPLETED",
+      "current_stage": "13. Lifecycle Settlement & Verification",
+      "agent_assigned": "ULTRON Payment & Settlement Agent",
+      "started_at": "2026-11-11T15:34:05.623Z",
+      "completed_at": "2026-11-12T14:34:05.623Z"
+    }
+  ],
+  "product_snapshots": [
+    {
+      "id": "SNP-CH3-LAPTOP-01",
+      "external_id": "ABC12345",
+      "source": "Channel3",
+      "title": "Lenovo ThinkPad T480 Renewed Enterprise Laptop (14\" FHD, Intel Core i5, 16GB RAM, 512GB NVMe SSD)",
+      "description": "Commercial-grade enterprise laptop with 16GB DDR4 RAM, 512GB PCIe NVMe SSD, Thunderbolt 3, and 1-year vendor warranty.",
+      "price": 189.99,
+      "currency": "USD",
+      "vendor": "Lenovo Authorized Refurbisher (Channel3)",
+      "category": "laptop",
+      "image_url": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80",
+      "product_url": "https://channel3.io/products/ABC12345",
+      "rating": 4.7,
+      "in_stock": true,
+      "specs_json": {
+        "sku": "ABC12345",
+        "ram": "16GB DDR4",
+        "storage": "512GB NVMe SSD",
+        "cpu": "Intel Core i5-8350U",
+        "display": "14\" 1080p IPS",
+        "warranty": "1-Year Commercial"
+      },
+      "created_at": "2026-11-11T15:00:00.000Z"
+    },
+    {
+      "id": "SNP-CH3-LAPTOP-02",
+      "external_id": "CH3-DELL-7490",
+      "source": "Channel3",
+      "title": "Dell Latitude 7490 Business Ultrabook (14\" FHD, Intel Core i7, 16GB RAM, 256GB SSD)",
+      "description": "Lightweight enterprise ultrabook featuring 16GB RAM, 256GB M.2 SSD, Gigabit Ethernet, and Windows 11 Pro.",
+      "price": 194.5,
+      "currency": "USD",
+      "vendor": "Dell Outlet Commercial Partner",
+      "category": "laptop",
+      "image_url": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
+      "product_url": "https://channel3.io/products/CH3-DELL-7490",
+      "rating": 4.6,
+      "in_stock": true,
+      "specs_json": {
+        "sku": "DELL-LAT-7490",
+        "ram": "16GB DDR4",
+        "storage": "256GB SSD",
+        "cpu": "Intel Core i7-8650U",
+        "display": "14\" FHD Anti-Glare",
+        "warranty": "1-Year ProSupport"
+      },
+      "created_at": "2026-11-11T15:00:00.000Z"
+    },
+    {
+      "id": "SNP-CH3-LAPTOP-03",
+      "external_id": "CH3-ASUS-EXPERT",
+      "source": "Channel3",
+      "title": "ASUS ExpertBook B1 Enterprise Laptop (15.6\" FHD, Intel Core i7, 16GB RAM, 1TB NVMe SSD)",
+      "description": "High-capacity developer workstation laptop with 16GB RAM, 1TB PCIe NVMe SSD, MIL-STD-810H durability.",
+      "price": 689.0,
+      "currency": "USD",
+      "vendor": "ASUS Enterprise Channel3",
+      "category": "laptop",
+      "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
+      "product_url": "https://channel3.io/products/CH3-ASUS-EXPERT",
+      "rating": 4.8,
+      "in_stock": true,
+      "specs_json": {
+        "sku": "ASUS-EXP-1TB",
+        "ram": "16GB DDR4",
+        "storage": "1TB NVMe SSD",
+        "cpu": "Intel Core i7-1255U",
+        "display": "15.6\" FHD",
+        "warranty": "3-Year Enterprise"
+      },
+      "created_at": "2026-11-11T15:00:00.000Z"
+    },
+    {
+      "id": "SNP-CH3-MONITOR-01",
+      "external_id": "CH3-ASUS-VG249Q1A",
+      "source": "Channel3",
+      "title": "ASUS TUF Gaming VG249Q1A 23.8\" FHD 165Hz (144Hz+ Supported) IPS 1ms Gaming Monitor",
+      "description": "165Hz (exceeds 144Hz minimum requirement) IPS display with 1ms MPRT response time, FreeSync Premium, DisplayPort & HDMI.",
+      "price": 129.99,
+      "currency": "USD",
+      "vendor": "ASUS Official Store (Channel3 Partner)",
+      "category": "monitor",
+      "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+      "product_url": "https://channel3.io/products/CH3-ASUS-VG249Q1A",
+      "rating": 4.8,
+      "in_stock": true,
+      "specs_json": {
+        "sku": "VG249Q1A-165HZ",
+        "refresh_rate": "165Hz (144Hz+ Native)",
+        "panel": "IPS",
+        "resolution": "1920x1080 FHD",
+        "response_time": "1ms"
+      },
+      "created_at": "2026-11-11T15:00:00.000Z"
+    },
+    {
+      "id": "SNP-CH3-GPU-01",
+      "external_id": "RTX4090-24GB",
+      "source": "Channel3",
+      "title": "NVIDIA GeForce RTX 4090 24GB GDDR6X Enterprise Compute & AI Accelerator",
+      "description": "Flagship 24GB GDDR6X GPU with 16,384 CUDA cores for local LLM inference, deep learning, and 3D rendering.",
+      "price": 1799.0,
+      "currency": "USD",
+      "vendor": "NVIDIA Authorized Tier-1 Distributor",
+      "category": "gpu",
+      "image_url": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=800&q=80",
+      "product_url": "https://channel3.io/products/RTX4090-24GB",
+      "rating": 4.9,
+      "in_stock": true,
+      "specs_json": {
+        "sku": "RTX4090-24GB",
+        "vram": "24GB GDDR6X",
+        "cuda_cores": "16384",
+        "interface": "PCIe 4.0 x16",
+        "warranty": "3-Year Manufacturer"
+      },
+      "created_at": "2026-11-11T15:00:00.000Z"
+    },
+    {
+      "id": "SNP-CH3-GPU-02",
+      "external_id": "RX7900XTX-24GB",
+      "source": "Channel3",
+      "title": "AMD Radeon RX 7900 XTX 24GB GDDR6 Workstation Graphics Card",
+      "description": "High-bandwidth 24GB GDDR6 GPU accelerator with DisplayPort 2.1 and ROCm compute support.",
+      "price": 949.99,
+      "currency": "USD",
+      "vendor": "Sapphire Commercial Channel3",
+      "category": "gpu",
+      "image_url": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80",
+      "product_url": "https://channel3.io/products/RX7900XTX-24GB",
+      "rating": 4.7,
+      "in_stock": true,
+      "specs_json": {
+        "sku": "RX7900XTX-24GB",
+        "vram": "24GB GDDR6",
+        "interface": "PCIe 4.0 x16",
+        "warranty": "3-Year Commercial"
+      },
+      "created_at": "2026-11-11T15:00:00.000Z"
+    },
+    {
+      "id": "SNP-CH3-CHAIR-01",
+      "external_id": "CH3-ERGO-CHAIR-89",
+      "source": "Channel3",
+      "title": "ULTRON ErgoMesh Pro Executive Office Chair with Lumbar Support & Breathable Mesh",
+      "description": "Commercial BIFMA-certified ergonomic office chair with adjustable lumbar support, armrests, and heavy-duty casters.",
+      "price": 84.99,
+      "currency": "USD",
+      "vendor": "Workspace Furnishings Direct (Channel3)",
+      "category": "chair",
+      "image_url": "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?auto=format&fit=crop&w=800&q=80",
+      "product_url": "https://channel3.io/products/CH3-ERGO-CHAIR-89",
+      "rating": 4.6,
+      "in_stock": true,
+      "specs_json": {
+        "sku": "ERGO-CHAIR-89",
+        "certification": "BIFMA X5.1",
+        "weight_capacity": "300 lbs",
+        "warranty": "5-Year Frame"
+      },
+      "created_at": "2026-11-11T15:00:00.000Z"
+    },
+    {
+      "id": "SNP-CH3-PHONE-01",
+      "external_id": "CH3-PIXEL-256",
+      "source": "Channel3",
+      "title": "Samsung Galaxy A54 5G Unlocked Enterprise Smartphone (256GB Storage, 50MP OIS Camera)",
+      "description": "Enterprise-ready unlocked 5G smartphone featuring 256GB storage, 8GB RAM, 50MP Optical Image Stabilization camera, and 120Hz AMOLED display.",
+      "price": 349.99,
+      "currency": "USD",
+      "vendor": "Samsung Business Direct (Channel3)",
+      "category": "smartphone",
+      "image_url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+      "product_url": "https://channel3.io/products/CH3-PIXEL-256",
+      "rating": 4.7,
+      "in_stock": true,
+      "specs_json": {
+        "sku": "GALAXY-A54-256GB",
+        "storage": "256GB",
+        "ram": "8GB",
+        "camera": "50MP OIS Triple Camera",
+        "display": "6.4\" 120Hz Super AMOLED"
+      },
+      "created_at": "2026-11-11T15:00:00.000Z"
+    }
+  ],
+  "plans": [
+    {
+      "id": "PLAN-PROC-7893",
+      "objective_id": "OBJ-46733",
+      "version": 1,
+      "status": "PAID",
+      "total_amount": 129.99,
+      "currency": "USD",
+      "notes": "Autonomous selection: 1x ASUS TUF Gaming VG249Q1A 23.8\" FHD 165Hz (144Hz+ Supported) IPS 1ms Gaming Monitor ($129.99 USD).",
+      "created_at": "2026-11-12T18:49:26.000Z",
+      "updated_at": "2026-11-12T19:19:29.184Z"
+    },
+    {
+      "id": "PLAN-PROC-001",
+      "objective_id": "OBJ-1001",
+      "version": 1,
+      "status": "PAID",
+      "total_amount": 899.79,
+      "currency": "USD",
+      "notes": "Verified Enterprise Workstation Display & Dock Bundle ($899.79 USD).",
+      "created_at": "2026-11-11T15:34:05.623Z",
+      "updated_at": "2026-11-12T14:34:05.623Z"
+    },
+    {
+      "id": "PLAN-PROC-002",
+      "objective_id": "OBJ-1002",
+      "version": 1,
+      "status": "APPROVED",
+      "total_amount": 79.99,
+      "currency": "USD",
+      "notes": "Keychron K8 Pro QMK/VIA Wireless Mechanical Keyboard ($79.99 USD).",
+      "created_at": "2026-11-12T14:34:05.623Z",
+      "updated_at": "2026-11-12T15:34:05.622Z"
+    }
+  ],
+  "plan_items": [
+    {
+      "id": "PLI-7893-0",
+      "plan_id": "PLAN-PROC-7893",
+      "product_snapshot_id": "SNP-CH3-MONITOR-01",
+      "title": "ASUS TUF Gaming VG249Q1A 23.8\" FHD 165Hz (144Hz+ Supported) IPS 1ms Gaming Monitor",
+      "unit_price": 129.99,
+      "quantity": 1,
+      "total_price": 129.99,
+      "currency": "USD",
+      "created_at": "2026-11-12T18:49:26.000Z"
+    },
+    {
+      "id": "PLI-001-1",
+      "plan_id": "PLAN-PROC-001",
+      "product_snapshot_id": "SNP-CH3-MON-4K",
+      "title": "Dell UltraSharp U2723QE 27\" 4K UHD IPS Black USB-C Hub Monitor & Thunderbolt Bundle",
+      "unit_price": 899.79,
+      "quantity": 1,
+      "total_price": 899.79,
+      "currency": "USD",
+      "created_at": "2026-11-11T15:34:05.623Z"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "APPR-PROC-9735",
+      "plan_id": "PLAN-PROC-7893",
+      "plan_version": 1,
+      "approver_name": "Marcus Vance",
+      "approver_role": "VP of Finance",
+      "status": "APPROVED",
+      "approved_amount": 129.99,
+      "currency": "USD",
+      "comments": "Approved for live PayPal Sandbox execution ($129.99 USD).",
+      "decided_at": "2026-11-12T18:49:30.000Z",
+      "created_at": "2026-11-12T18:49:28.000Z"
+    },
+    {
+      "id": "APPR-PROC-001",
+      "plan_id": "PLAN-PROC-001",
+      "plan_version": 1,
+      "approver_name": "Marcus Vance",
+      "approver_role": "VP of Finance",
+      "status": "APPROVED",
+      "approved_amount": 899.79,
+      "currency": "USD",
+      "comments": "Approved for enterprise workstation deployment.",
+      "decided_at": "2026-11-11T16:00:00.000Z",
+      "created_at": "2026-11-11T15:40:00.000Z"
+    },
+    {
+      "id": "APPR-PROC-002",
+      "plan_id": "PLAN-PROC-002",
+      "plan_version": 1,
+      "approver_name": "Marcus Vance",
+      "approver_role": "VP of Finance",
+      "status": "APPROVED",
+      "approved_amount": 79.99,
+      "currency": "USD",
+      "comments": "Approved peripheral plan.",
+      "decided_at": "2026-11-12T15:00:00.000Z",
+      "created_at": "2026-11-12T14:40:00.000Z"
+    }
+  ],
+  "payment_orders": [
+    {
+      "id": "REDACTED_TEST_REFERENCE",
+      "plan_id": "PLAN-PROC-7893",
+      "approval_id": "APPR-PROC-9735",
+      "paypal_order_id": "REDACTED_TEST_REFERENCE",
+      "capture_id": "REDACTED_TEST_REFERENCE",
+      "amount": 129.99,
+      "currency": "USD",
+      "environment": "sandbox",
+      "status": "COMPLETED",
+      "checkout_url": "https://www.sandbox.paypal.com/checkoutnow?token=REDACTED_TEST_REFERENCE",
+      "payment_metadata": {
+        "order_status": "payment_completed",
+        "payment_stage": "PAYMENT COMPLETED",
+        "ultron_order_ref": "ORD-ULTRON-2026-2961",
+        "gateway": "PayPal REST v2 API (Live Sandbox)",
+        "intent": "CAPTURE",
+        "created_by": "ULTRON Financial Agent",
+        "checkout_url": "https://www.sandbox.paypal.com/checkoutnow?token=REDACTED_TEST_REFERENCE",
+        "paypal_order_id": "REDACTED_TEST_REFERENCE",
+        "paypal_remote_status": "COMPLETED",
+        "merchant_account": {
+          "merchant_id": "ULTRON-ENT-SANDBOX-01",
+          "merchant_name": "ULTRON Autonomous Procurement Corp.",
+          "merchant_email": "demo@example.invalid",
+          "sandbox_url": "https://sandbox.paypal.com",
+          "api_base_url": "https://api-m.sandbox.paypal.com",
+          "environment": "SANDBOX"
+        },
+        "merchant_email": "demo@example.invalid",
+        "buyer_email": "demo@example.invalid",
+        "payer_id": "UE7RD3EAWAEUJ",
+        "buyer_status": "VERIFIED_VIA_PAYPAL_API",
+        "buyer_approved_at": "2026-11-12T19:19:27.057Z",
+        "merchant_receiving_account": "demo@example.invalid",
+        "capture_time": "2026-11-12T19:19:28Z",
+        "verified_capture": true,
+        "capture_status": "COMPLETED",
+        "capture_channel": "PayPal Sandbox REST v2 API (Verified Live Capture)"
+      },
+      "created_at": "2026-11-12T18:49:32.000Z",
+      "updated_at": "2026-11-12T19:19:29.184Z",
+      "merchant_account": {
+        "merchant_id": "ULTRON-ENT-SANDBOX-01",
+        "merchant_name": "ULTRON Autonomous Procurement Corp.",
+        "merchant_email": "demo@example.invalid",
+        "sandbox_url": "https://sandbox.paypal.com",
+        "api_base_url": "https://api-m.sandbox.paypal.com",
+        "environment": "SANDBOX"
+      }
+    },
+    {
+      "id": "REDACTED_TEST_REFERENCE",
+      "plan_id": "PLAN-PROC-001",
+      "approval_id": "APPR-PROC-001",
+      "paypal_order_id": "REDACTED_TEST_REFERENCE",
+      "capture_id": "REDACTED_TEST_REFERENCE",
+      "amount": 899.79,
+      "currency": "USD",
+      "environment": "sandbox",
+      "status": "COMPLETED",
+      "checkout_url": null,
+      "payment_metadata": {
+        "payer_email": "demo@example.invalid",
+        "payer_name": "Demo Administrator",
+        "merchant_id": "ULTRON-ENT-SANDBOX-01",
+        "merchant_name": "ULTRON Autonomous Procurement Corp.",
+        "merchant_email": "demo@example.invalid",
+        "gateway": "PayPal REST v2 API",
+        "verified_capture": true,
+        "payment_stage": "PAYMENT COMPLETED",
+        "protection_note": "PERMANENT HISTORICAL RECORD: Read-only completed 899.79 USD Sandbox transaction. Must not be modified or re-captured.",
+        "merchant_account": {
+          "merchant_id": "ULTRON-ENT-SANDBOX-01",
+          "merchant_name": "ULTRON Autonomous Procurement Corp.",
+          "merchant_email": "demo@example.invalid",
+          "sandbox_url": "https://sandbox.paypal.com",
+          "api_base_url": "https://api-m.sandbox.paypal.com",
+          "environment": "SANDBOX"
+        }
+      },
+      "created_at": "2026-11-11T15:34:05.623Z",
+      "updated_at": "2026-11-12T14:34:05.623Z",
+      "merchant_account": {
+        "merchant_id": "ULTRON-ENT-SANDBOX-01",
+        "merchant_name": "ULTRON Autonomous Procurement Corp.",
+        "merchant_email": "demo@example.invalid",
+        "sandbox_url": "https://sandbox.paypal.com",
+        "api_base_url": "https://api-m.sandbox.paypal.com",
+        "environment": "SANDBOX"
+      }
+    },
+    {
+      "id": "REDACTED_TEST_REFERENCE",
+      "plan_id": "PLAN-PROC-002",
+      "approval_id": "APPR-PROC-002",
+      "paypal_order_id": "UNVERIFIED",
+      "capture_id": null,
+      "amount": 79.99,
+      "currency": "USD",
+      "environment": "sandbox",
+      "status": "UNVERIFIED",
+      "checkout_url": null,
+      "payment_metadata": {
+        "order_status": "unverified",
+        "verification_status": "UNVERIFIED",
+        "ultron_order_ref": "ORD-ULTRON-2026-6727",
+        "protection_note": "UNVERIFIED TRANSACTION: Amount $79.99 USD with reference REDACTED_TEST_REFERENCE. Must remain UNVERIFIED unless its actual PayPal order and capture are confirmed directly through the PayPal Sandbox API.",
+        "merchant_account": {
+          "merchant_id": "ULTRON-ENT-SANDBOX-01",
+          "merchant_name": "ULTRON Autonomous Procurement Corp.",
+          "merchant_email": "demo@example.invalid",
+          "sandbox_url": "https://sandbox.paypal.com",
+          "api_base_url": "https://api-m.sandbox.paypal.com",
+          "environment": "SANDBOX"
+        }
+      },
+      "created_at": "2026-11-11T16:00:00.000Z",
+      "updated_at": "2026-11-11T16:00:00.000Z",
+      "merchant_account": {
+        "merchant_id": "ULTRON-ENT-SANDBOX-01",
+        "merchant_name": "ULTRON Autonomous Procurement Corp.",
+        "merchant_email": "demo@example.invalid",
+        "sandbox_url": "https://sandbox.paypal.com",
+        "api_base_url": "https://api-m.sandbox.paypal.com",
+        "environment": "SANDBOX"
+      }
+    }
+  ],
+  "ai_runs": [
+    {
+      "id": "AIR-9901",
+      "objective_id": "OBJ-46733",
+      "mission_id": "MSN-46733",
+      "provider": "OpenRouter / Deterministic",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "agent_role": "Procurement Planner & Spec Evaluator",
+      "prompt_summary": "Parse objective: Purchase a monitor with a minimum 144Hz refresh rate.",
+      "response_summary": "Selected ASUS TUF Gaming VG249Q1A 165Hz IPS Monitor ($129.99 USD) and prepared Plan PLAN-PROC-7893.",
+      "tokens_used": 384,
+      "latency_ms": 215,
+      "status": "SUCCESS",
+      "created_at": "2026-11-13T06:27:19.957264Z"
+    }
+  ],
+  "objective_events": [
+    {
+      "id": "EVT-1001",
+      "objective_id": "OBJ-46733",
+      "event_type": "PAYMENT_CAPTURED",
+      "actor": "PayPal Sandbox REST v2",
+      "message": "PayPal Sandbox Order REDACTED_TEST_REFERENCE verified and captured (Capture ID: REDACTED_TEST_REFERENCE, Amount: $129.99 USD).",
+      "metadata_json": {
+        "paypal_order_id": "REDACTED_TEST_REFERENCE",
+        "capture_id": "REDACTED_TEST_REFERENCE"
+      },
+      "created_at": "2026-11-12T19:19:28.000Z"
+    },
+    {
+      "id": "EVT-1002",
+      "objective_id": "OBJ-1001",
+      "event_type": "PAYMENT_SETTLED",
+      "actor": "PayPal Sandbox REST v2",
+      "message": "Historical verified PayPal Sandbox settlement ($899.79 USD, Order: REDACTED_TEST_REFERENCE, Capture: REDACTED_TEST_REFERENCE).",
+      "metadata_json": {
+        "paypal_order_id": "REDACTED_TEST_REFERENCE",
+        "capture_id": "REDACTED_TEST_REFERENCE"
+      },
+      "created_at": "2026-11-11T15:34:05.623Z"
+    }
+  ],
+  "cart": []
+}
